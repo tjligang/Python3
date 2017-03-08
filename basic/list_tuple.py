@@ -1,7 +1,7 @@
 #!/usr/bin/env python3
 # -*- coding: utf-8 -*-
 
-# Python内置的一种数据类型是列表：list。list是一种有序的集合，可以随时添加和删除其中的元素
+# Python内置的一种数据类型是列表：list。list是一种有序的集合，可以随时添加和删除其中的元素,list用[]
 classmates = ['Michael', 'Bob', 'Tracy']
 # list的各种访问方法：
 print(classmates, len(classmates))
@@ -33,3 +33,25 @@ print(p[1], s[2][1])
 # 如果一个list中一个元素也没有，就是一个空的list，它的长度为0：
 L = []
 print(len(L))
+
+# 元组tuple一旦初始化就不能修改，tuple用()。查看方法和list一样
+classmates = ('Michael', 'Bob', 'Tracy')
+print(classmates)
+# 定义一个tuple时，tuple的元素就必须被确定下来
+# 多个元素的tuple
+t = (1, 2)
+print(t)
+# 空tuple
+t = ()
+print(t)
+# 只有1个元素的tuple，如果写成t = (1)，()被认为是数学公式中的小括号
+t = (1,)
+print(t)
+
+# tuple的元素确实变了，但其实变的不是tuple的元素，而是list的元素。
+# tuple一开始指向的list并没有改成别的list，所以，tuple所谓的“不变”是说，tuple的每个元素，指向永远不变。
+# 即指向'a'，就不能改成指向'b'，指向一个list，就不能改成指向其他对象，但指向的这个list本身是可变的！
+t = ('a', 'b', ['A', 'B'])
+t[2][0] = 'X'
+t[2][1] = 'Y'
+print(t)
