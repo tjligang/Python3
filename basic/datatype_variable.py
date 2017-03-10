@@ -1,13 +1,15 @@
 #!/usr/bin/env python3
 # -*- coding: utf-8 -*-
 
-# 整数（十进制、十六进制）
-print(1, 0x00FE)
+# 整数（十进制、十六进制、八进制）
+print(1, 0x00FE, 0o10)
 # 浮点数（数学表示、科学计数法）
 print(3.14, 1.23e9)
 
-# 字符串使用单引号或双引号
+# 字符串使用单引号或双引号，“，”通过空格连接两个字符串
 print('abc', "xyz")
+# +连接两个字符串，中间没有空格，或者直接将两个字符串写在一起
+print('abc'+"xyz", 'abc'"xyz")
 # 如果'本身也是一个字符，那就可以用""括起来(相反也可以)
 print("I'm OK", '"xyz"')
 # 既包含'又包含"可以用转义字符\来标识
@@ -15,9 +17,16 @@ print('I\'m \"OK\"!')
 # 转义字符\可以转义各种控制字符，\\表示的字符就是\
 print('I\'m learning\nPython.')
 print('\\\n\\')
-# 为了简化，用r''表示''内部的字符串默认不转义
+# 为了简化，用r''表示''内部的字符串默认不转义，表示dos路径或写正则表达式时非常有用
 print(r'\\\t\\')
-# 用'''...'''的格式表示多行内容，代替\n，可以和r配合
+print('C:\nowhere')
+print(r'C:\nowhere')
+print('C:\\abc\\def\\xyz')
+print(r'C:\abc\def\xyz')
+# print(r'C:\abc\def\xyz\')最后一个\被python误认为是跨行标记，会报错
+print(r'C:\abc\def\xyz''\\')
+
+# 用'''...'''的格式表示多行内容（长字符串），代替\n，可以和r配合
 print('''line1
 line2
 line3''')
