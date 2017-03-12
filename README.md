@@ -2,7 +2,8 @@
 
 > 
  - [Python3][1]
- - [IDE: PyCharm][2]
+ - [Python3文档][2]
+ - [IDE: PyCharm][3]
 
 pycharm中的快捷键：
 
@@ -11,5 +12,7 @@ pycharm中的快捷键：
  - `Ctrl+Shift+F10` : 运行
  - `Alt+Shift+E` : 在Python Console中运行选中的代码
 
+
   [1]: https://www.python.org/downloads/
-  [2]: http://www.jetbrains.com/pycharm/download/
+  [2]: https://docs.python.org/3/
+  [3]: http://www.jetbrains.com/pycharm/download/

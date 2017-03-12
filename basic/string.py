@@ -23,7 +23,44 @@ print(b'ABC'.decode('ascii'), b'ABC'.decode('utf-8'), b'\xe4\xb8\xad\xe6\x96\x87
 # 1个中文字符经过UTF-8编码后通常会占用3个字节
 print(len('ABC'), len('中文'), len(b'ABC'), len(b'\xe4\xb8\xad\xe6\x96\x87'), len('中文'.encode('utf-8')))
 
-# 格式化
+
+# 字符串方法
+# find返回index，没有则返回-1, 截至到end-1，不包括第二个index
+s = 'Python'
+print(s.find('on'), s.find('py'), s.find('th', 1, 3))
+
+# split和join
+# split将字符串按照指定符号分割成序列
+path = '/usr/bin/env'
+sep = '/'
+print(path.split(sep))
+path = 'C:\\usr\\bin\\env'
+sep = '\\'
+print(path.split(sep))
+# join使用指定符号将字符串连接序列
+dirs = '', 'usr', 'bin', 'env'  # dirs是tuple
+sep = '/'
+print(sep.join(dirs))  # 在tuple的元素之间用'/'分隔，注意dirs第一个元素是空，不是空格
+dirs = 'C:', 'usr', 'bin', 'env'
+sep = '\\'
+print(sep.join(dirs))
+# join只能连接字符串，数字必须加''变为字符串才能join
+s = ['1', '2', '3', '4', '5']
+sep = '+'
+print(sep.join(s))
+
+# 大小写转换
+s = 'Hello, world'
+print(s.lower(), s.upper(), s.title())
+# 替换
+print(s.replace('world', 'python'))
+# 去除字符串两侧的空格或指定字符
+s = '  !**!Hello, !**! world!**!  '
+print(s.strip())
+print(s.strip(' !*'))
+
+
+# printf方式格式化：format % values
 print('Hello, %s' % 'world')
 print('Hi, %s, you have $%d.' % ('Michael', 1000000))
 print('%2d-%02d' % (3, 1))

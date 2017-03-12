@@ -69,3 +69,16 @@ print(10/3, 9/3)
 print(10//3, 9//3)
 # 余数运算
 print(10%3, 9%3)
+
+# 各种赋值方法
+# 序列解包
+x, y, z = 1, 2, 3
+print(x, y, z)
+x, y = y, x
+print(x, y)
+x, y, z = z, x, y
+print(x, y, z)
+d = {'Michael': 95, 'Bob': 75, 'Tracy': 85}
+key, value = d.popitem()
+print(key, value)
+

@@ -3,9 +3,9 @@
 
 # 通用的序列操作：索引indexing、分片slicing、加adding、乘multiply ing、成员资格、长度、最大值/最小值
 # 以下实例以list为例，也适用于tuple和string
-l = [1, 2, 3, 4, 5, 6, 7, 8, 9, 10]
 
 # 通过索引获取序列元素
+l = [1, 2, 3, 4, 5, 6, 7, 8, 9, 10]
 print(l, len(l))
 print(l[0], l[1], l[2])
 print(l[-1], l[-2], l[-3])
@@ -76,6 +76,9 @@ l = [7, -3, 10]
 print(len(l), max(l), min(l))
 # min/max可以直接将多个数字作为参数，并不一定使用list
 print(max(7, -3, 10))
+# count返回元素出现的次数
+print('hello, world'.count('l'))
+
 
 # list是一种有序的集合，可以随时添加和删除其中的元素,list用[]定义
 # list()函数进行类型转换
@@ -137,20 +140,21 @@ l = ['python', 'java', p, 'scheme']
 print(p[1], l[2][1])
 
 
-# 元组tuple一旦初始化就不能修改，tuple用()。查看方法和list一样
-t = ('Michael', 'Bob', 'Tracy')
+# 元组tuple一旦初始化就不能修改
+# 用逗号分隔的一组值就是tuple，tuple的关键是逗号，()可以不用。查看方法和list一样。
+t = ('Michael', 'Bob', 'Tracy')  # 也可写成t = 'Michael', 'Bob', 'Tracy'
 print(t)
 # tuple()函数进行类型转换，将list和string转换成tuple
 print(tuple([1, 2, 3]), tuple('abc'))
 # 定义一个tuple时，tuple的元素就必须被确定下来
 # 多个元素的tuple
-t = (1, 2)
+t = (1, 2)  # t = 1, 2
 print(t)
 # 空tuple
 t = ()
 print(t)
-# 只有1个元素的tuple，如果写成t = (1)，()被认为是数学公式中的小括号
-t = (1,)
+# 只有1个元素的tuple，如果写成t = (1)的话，()被认为是数学公式中的小括号
+t = (1,)  # t = 1,
 print(t)
 
 # “可变”的tuple
