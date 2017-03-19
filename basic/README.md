@@ -22,21 +22,21 @@ Python中常用的序列有：list、tuple、range和str。
 通用序列操作不会改变序列，适用于所有序列类型。
 
 > 
- - [Python Doc : Common Sequence Operations][2]
- 
+ - [Doc : Common Sequence Operations][2]
+
 ## 可变序列操作
- 
+
  可变序列操作会改变序列中的值，适用于可读写的序列，比如list。list在此基础上还增加了排序等操作。
- 
- > 
- - [Python Doc : Mutable Sequence Types][3]
- - [Python Doc : Lists][4]
+
+ >
+ - [Doc : Mutable Sequence Types][3]
+ - [Doc : Lists][4]
 
 # 字符串
 
 ## 编码的背景知识
 
-> 
+>
  - [廖雪峰python教程-字符串和编码][5]
  - [unicode编码简介][6]
  - [学点编码知识又不会死：Unicode的流言终结者和编码大揭秘][7]
@@ -48,20 +48,26 @@ windows记事本会在文件开始的地方加上几个特殊字符（UTF-8 BOM�
 
 ## 字符串方法
 
-> 
- - [Python doc : string method][11]
+>
+ - [Doc : string method][11]
 
 ## 格式化输出
 
-> 
- - [Python doc : printf][12]
+>
+ - [Doc : printf][12]
+
+# 条件与循环
+
+列表推导式list comprehension参考以下范例：
+>
+ - [Doc : list comprehension][13]
 
 # 字典dict和集合set
 
 字典dict和序列list、集合set的比较，对于不可变对象的理解，参考廖雪峰教程：
 
-> 
- - [廖雪峰python教程-使用dict和set][13]
+>
+ - [廖雪峰python教程-使用dict和set][14]
 
 
   [1]: http://www.liaoxuefeng.com/wiki/0014316089557264a6b348958f449949df42a6d3a2e542c000/001431643484137e38b44e5925440ec8b1e4c70f800b4e2000
@@ -76,4 +82,5 @@ windows记事本会在文件开始的地方加上几个特殊字符（UTF-8 BOM�
   [10]: https://www.zhihu.com/question/20167122
   [11]: https://docs.python.org/3/library/stdtypes.html#string-methods
   [12]: https://docs.python.org/3/library/stdtypes.html#printf-style-string-formatting
-  [13]: http://www.liaoxuefeng.com/wiki/0014316089557264a6b348958f449949df42a6d3a2e542c000/00143167793538255adf33371774853a0ef943280573f4d000
+  [13]: https://docs.python.org/3/tutorial/datastructures.html#more-on-lists
+  [14]: http://www.liaoxuefeng.com/wiki/0014316089557264a6b348958f449949df42a6d3a2e542c000/00143167793538255adf33371774853a0ef943280573f4d000

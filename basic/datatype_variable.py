@@ -9,7 +9,7 @@ print(3.14, 1.23e9)
 # 字符串使用单引号或双引号，“，”通过空格连接两个字符串
 print('abc', "xyz")
 # +连接两个字符串，中间没有空格，或者直接将两个字符串写在一起
-print('abc'+"xyz", 'abc'"xyz")
+print('abc' + "xyz", 'abc'"xyz")
 # 如果'本身也是一个字符，那就可以用""括起来(相反也可以)
 print("I'm OK", '"xyz"')
 # 既包含'又包含"可以用转义字符\来标识
@@ -36,6 +36,15 @@ line3's''')
 
 # 布尔值，注意大小写
 print(True, False, 3 > 2, 3 > 5)
+# 什么是true和false
+if False or None or 0 or "" or () or [] or {}:
+    print('True')
+else:
+    print('All of them are FASLE!')
+
+if True and 1 and 'abc' and (1, 2, 3) and {'x': 1, 'y': 2}:
+    print('All of them are TRUE!')
+
 # 与或非
 print(True and False, 5 > 3 and 2 > 1, True or False, 5 > 3 or 1 > 3, not True, not 1 > 2)
 
@@ -64,11 +73,11 @@ print(b)
 PI = 3.14159265359
 
 # /除法计算结果是浮点数，即使是两个整数恰好整除，结果也是浮点数
-print(10/3, 9/3)
+print(10 / 3, 9 / 3)
 # //称为地板除，两个整数的除法仍然是整数
-print(10//3, 9//3)
+print(10 // 3, 9 // 3)
 # 余数运算
-print(10%3, 9%3)
+print(10 % 3, 9 % 3)
 
 # 各种赋值方法
 # 序列解包
@@ -81,4 +90,17 @@ print(x, y, z)
 d = {'Michael': 95, 'Bob': 75, 'Tracy': 85}
 key, value = d.popitem()
 print(key, value)
-
+a, b, *rest = [1, 2, 3, 4]  # 使用list保存剩余的值
+print(a, b, rest)
+# 链式赋值
+x = y = 1
+print(x, y)
+# 增量赋值
+x = 2
+x += 1
+x *= 2
+print(x)
+x = 'foot'
+x += 'ball'
+x *= 2
+print(x)
