@@ -24,7 +24,7 @@ print(b'ABC'.decode('ascii'), b'ABC'.decode('utf-8'), b'\xe4\xb8\xad\xe6\x96\x87
 print(len('ABC'), len('中文'), len(b'ABC'), len(b'\xe4\xb8\xad\xe6\x96\x87'), len('中文'.encode('utf-8')))
 
 
-# 字符串方法
+# 字符串方法：字符串是不可变对象，所有方法不改变自身的值，只返回一个copy
 # find返回index，没有则返回-1, 截至到end-1，不包括第二个index
 s = 'Python'
 print(s.find('on'), s.find('py'), s.find('th', 1, 3))
@@ -33,7 +33,7 @@ print(s.find('on'), s.find('py'), s.find('th', 1, 3))
 # split将字符串按照指定符号分割成序列
 path = '/usr/bin/env'
 sep = '/'
-print(path.split(sep))
+print(path.split(sep), path)
 path = 'C:\\usr\\bin\\env'
 sep = '\\'
 print(path.split(sep))

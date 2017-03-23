@@ -1,7 +1,9 @@
 #!/usr/bin/env python3
 # -*- coding: utf-8 -*-
 
-# 通用的序列操作：索引indexing、分片slicing、加adding、乘multiply ing、成员资格、长度、最大值/最小值
+# 通用的序列操作：
+# 适用于所有序列：list、tuple和string，不改变序列
+# 索引indexing、分片slicing、加adding、乘multiply ing、成员资格、长度、最大值/最小值
 # 以下实例以list为例，也适用于tuple和string
 
 # 通过索引获取序列元素
@@ -80,6 +82,8 @@ print(max(7, -3, 10))
 print('hello, world'.count('l'))
 
 
+# 可变序列操作：
+# 适用于可变序列list，list是可变对象，所有可变序列操作都会导致list本身改变
 # list是一种有序的集合，可以随时添加和删除其中的元素,list用[]定义
 # list()函数进行类型转换
 l = list('hello')
@@ -140,7 +144,7 @@ l = ['python', 'java', p, 'scheme']
 print(p[1], l[2][1])
 
 
-# 元组tuple一旦初始化就不能修改
+# 元组tuple一旦初始化就不能修改，是不可变对象，支持所有通用序列操作
 # 用逗号分隔的一组值就是tuple，tuple的关键是逗号，()可以不用。查看方法和list一样。
 t = ('Michael', 'Bob', 'Tracy')  # 也可写成t = 'Michael', 'Bob', 'Tracy'
 print(t)
@@ -168,7 +172,7 @@ print(t)
 
 
 # None和空列表的区别
-# None是一个特殊的变量，指向的内存区域没有被赋值，可理解成空值，但变量本身是存在的
+# None是一个特殊的变量，有自己的数据类型NoneType，指向的内存区域没有被赋值，可理解成空值，但变量本身是存在的
 # l1的第一个元素是None，这个元素指向的内存区域没有被赋值
 l = [None]
 print(len(l))  # len为1，不是空list
@@ -181,6 +185,9 @@ print(len(l))  # len为0，空list
 # 第一个元素的值为1
 l.append(1)
 print(l)
+# 以下试图定义空列表的语句是错误的，None的数据类型是NoneType，不支持任何运算也没有任何内建方法
+# l = None 或者 l = list(None)
+# print(len(l))
 
 # 序列相乘中的None和空列表
 # l有一个元素[None]，这个元素是一个list，list中包含一个元素None，这个元素指向的内存区域没有被赋值

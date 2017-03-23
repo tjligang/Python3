@@ -2,14 +2,9 @@
 
 [TOC]
 
-> 
- - 条件与循环
- - 字典dict和集合set
-
 # 输入/输出
 
-> 
- - [廖雪峰python教程-输入和输出][1]
+> [廖雪峰python教程-输入和输出][1]
 
 # 数据类型和变量
 
@@ -21,53 +16,48 @@ Python中常用的序列有：list、tuple、range和str。
 
 通用序列操作不会改变序列，适用于所有序列类型。
 
-> 
- - [Doc : Common Sequence Operations][2]
+> [Doc : Common Sequence Operations][2]
 
 ## 可变序列操作
 
  可变序列操作会改变序列中的值，适用于可读写的序列，比如list。list在此基础上还增加了排序等操作。
 
- >
- - [Doc : Mutable Sequence Types][3]
- - [Doc : Lists][4]
+> [Doc : Mutable Sequence Types][3]
+> [Doc : Lists][4]
 
 # 字符串
 
 ## 编码的背景知识
 
->
- - [廖雪峰python教程-字符串和编码][5]
- - [unicode编码简介][6]
- - [学点编码知识又不会死：Unicode的流言终结者和编码大揭秘][7]
- - [从字节理解Unicode（UTF8/UTF16)][8]
- - [utf-8与utf-8(无BOM)的区别][9]
- - [理性看待utf-8 BOM][10]
+> [廖雪峰python教程-字符串和编码][5]
+> [unicode编码简介][6]
+> [学点编码知识又不会死：Unicode的流言终结者和编码大揭秘][7]
+> [从字节理解Unicode（UTF8/UTF16)][8]
+> [utf-8与utf-8(无BOM)的区别][9]
+> [理性看待utf-8 BOM][10]
 
 windows记事本会在文件开始的地方加上几个特殊字符（UTF-8 BOM），结果会导致程序运行出现莫名其妙的错误。
 
 ## 字符串方法
 
->
- - [Doc : string method][11]
+字符串是不可变对象，支持所有通用序列操作，并提供额外的字符串方法。因为字符串不可改变，所有方法不会改变字符串自身的值，只是返回一个copy。
+
+> [Doc : string method][11]
 
 ## 格式化输出
 
->
- - [Doc : printf][12]
+> [Doc : printf][12]
 
 # 条件与循环
 
 列表推导式list comprehension参考以下范例：
->
- - [Doc : list comprehension][13]
+> [Doc : list comprehension][13]
 
 # 字典dict和集合set
 
 字典dict和序列list、集合set的比较，对于不可变对象的理解，参考廖雪峰教程：
 
->
- - [廖雪峰python教程-使用dict和set][14]
+> [廖雪峰python教程-使用dict和set][14]
 
 
   [1]: http://www.liaoxuefeng.com/wiki/0014316089557264a6b348958f449949df42a6d3a2e542c000/001431643484137e38b44e5925440ec8b1e4c70f800b4e2000

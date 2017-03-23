@@ -48,9 +48,13 @@ if True and 1 and 'abc' and (1, 2, 3) and {'x': 1, 'y': 2}:
 # 与或非
 print(True and False, 5 > 3 and 2 > 1, True or False, 5 > 3 or 1 > 3, not True, not 1 > 2)
 
-# 空值
+# 空值，None是一个特殊类型的常量，有自己的数据类型NoneType，它只有一个值None，不是0，不是空字符串。
+# None不支持任何运算也没有任何内建方法.
+# None和任何其他的数据类型比较永远返回False。
+# 可以将None复制给任何变量，但是不能创建其他NoneType对象。
 a = None
 print('a is', a)
+print(type(None), type(0), type(''))
 
 # 可以把任意数据类型赋值给变量，同一个变量可以反复赋值，而且可以是不同类型的变量
 # 这种变量本身类型不固定的语言称之为动态语言
