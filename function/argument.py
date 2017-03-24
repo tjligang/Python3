@@ -204,8 +204,8 @@ person('Jack', 5678, **extra)
 
 
 # 为什么不能用一个list或tuple表示所有可变参数：
-# list可变对象不能作为参数，重复调用会出问题，tuple会导致函数中变量成为只读变量，无法修改
-# 调用之前还需要将要传入的值组装成tuple，麻烦
+# list可变对象不能作为参数，重复调用会出问题
+# 调用之前还需要将要传入的值组装成序列，麻烦
 def func(l=[]):
     l.append('end')
     print(l)
@@ -214,13 +214,3 @@ l1 = ['a', 'b']
 func(l1)
 print(l1)
 func(l1)
-
-
-def func(l=()):
-    l.append('end')
-    print(l)
-
-l1 = ('a', 'b')
-# func(l1)
-# print(l1)
-# func(l1)

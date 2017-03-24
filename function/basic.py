@@ -44,9 +44,8 @@ print(t)
 
 
 # 没有return或只写return的函数，返回None
-def my_func1():
+def func():
     print('hello, world')
     return
 
-x = my_func1()
-print(x)
+print(func())
