@@ -47,3 +47,14 @@ l1 = ['a', 'b']
 print(id(l1))
 l2 = l1.append('c')  # 现场修改，原对象改变，返回None
 print(l1, l2, id(l1), type(l1), id(l2), type(l2))
+
+
+# 对象的比较
+# 不可变对象使用共享引用，==和is结果相同
+x = 42
+y = 42
+print(x == y, x is y)
+# 可变对象不使用共享引用，==和is结果不同
+l1 = [1, 2, 3]
+l2 = [1, 2, 3]
+print(l1 == l2, l1 is l2)

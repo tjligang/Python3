@@ -1,6 +1,46 @@
 #!/usr/bin/env python3
 # -*- coding: utf-8 -*-
 
+# 字符串使用单引号或双引号，“，”通过空格连接两个字符串
+print('abc', "xyz")
+# +连接两个字符串，中间没有空格，或者直接将两个字符串写在一起
+print('abc' + "xyz", 'abc'"xyz")
+# 如果'本身也是一个字符，那就可以用""括起来(相反也可以)
+print("I'm OK", '"xyz"')
+# 既包含'又包含"可以用转义字符\来标识
+print('I\'m \"OK\"!')
+
+# 转义字符\可以转义各种控制字符，\\表示的字符就是\
+print('I\'m learning\nPython.')
+print('\\\n\\')
+s = 'a\nb\tc'
+print(s, len(s))  # 转义符\n算一个字符
+
+# 为了简化，用r''表示''内部的字符串默认不转义，表示文件系统或写正则表达式时非常有用
+print(r'\\\t\\')
+print('C:\nowhere')
+print(r'C:\nowhere')
+print('C:\\abc\\def\\xyz')
+print(r'C:\abc\def\xyz')
+# print(r'C:\abc\def\xyz\')最后一个\被python误认为是跨行标记，会报错
+print(r'C:\abc\def\xyz'+'\\')
+print('C:\\abc\\def\\xyz\\')
+print(r'C:\abc\def\xyz\\'[:-1])
+
+# 用'''...'''的格式表示多行内容（长字符串），代替\n，可以和r配合
+print('''line1
+line2
+line3''')
+print(r'''line1's
+line2's
+line3's''')
+
+
+
+
+
+
+
 # Python 3版本中，字符串是以Unicode编码的，也就是说，Python的字符串支持多语言
 print('包含中文的str')
 # 对于单个字符的编码，Python提供了ord()函数获取字符的对应unicode十进制整数表示
